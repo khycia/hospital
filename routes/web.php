@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'OutPatientsController@return');
+Route::get('/outpatients/{patient_id}', 'OutPatientsController@show');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/templates','OutPatientsController@temp');
+Route::get('/templates/another-page','OutPatientsController@anotherPage');
+//Route::get('/outpatients/{outpatients}',' OutPatientsController@index');
+//Route::get('/outpatients/create',' OutPatientsController@index');
