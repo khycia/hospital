@@ -13,6 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'DoctorsController@index');
+
+//CREATE FORM
+Route::get('/doctors/create', 'DoctorsController@create');
+
+Route::get('/doctors/{id}', 'DoctorsController@show');
+
+
+//EDIT DISPLAY THE UPDATE FORM
+Route::get('/doctors/{doctor}/edit', 'DoctorsController@edit');
+
+
+//STORE A RECORD
+Route::post('/doctors', 'DoctorsController@store');
+
+
+// UPDATE DOCTORS
+Route::put('/doctors/{doctor}', 'DoctorsController@update');
+
+// DELETE FORM
+Route::delete('/doctors/{doctor}', 'DoctorsController@destroy');
+
+
