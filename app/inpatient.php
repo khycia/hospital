@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class inpatient extends Model
 {
-     
+     protected $guarded=[];
 }
