@@ -17,7 +17,7 @@ class CreateInpatientsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('diagnosis');
-            $table->foreignId('room_number')->constrained('inpatients');
+            $table->integer('room_number');
             $table->timestamps();
         });
     }
