@@ -4,6 +4,7 @@
 <div class="container">
 	<div class="col=sm-12">
 		<h5> OutPatients</h5>
+		<a href="/outpatients/create">Create </a>
 		<ol> 
 		@foreach($outpatients as $outpatient)
 		<li>
