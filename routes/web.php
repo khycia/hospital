@@ -18,18 +18,41 @@ Route::get('/', function () {
 
 // Display nurses table
 Route::get('/nurses', 'NursesController@index');
-// Create a patient file
+//displaying rooms
+Route::get('/labs' , 'LabController@index');
+
+
+// Create a nurse file
 Route::get('/nurses/create', 'NursesController@create');
-// Display a patient from patients table
+//create a lab form
+Route::get('/labs/create' , 'LabController@create'); 
+ 
+
+
+// Display a nurse file from nurses table
 Route::get('/nurses/{id}', 'NursesController@show');
-// Edit a patient file
+//displaying lab
+Route::get('/labs' , 'LabController@show');
+
+// Edit a nurse file
 Route::get('/nurses/{id}/edit', 'NursesController@edit');
+//edit lab records
+Route::get('/labs/{lab}/edit' , 'LabController@edit');
 
-// Store a created patient file
+
+// Store a created nurse file
 Route::post('/nurses/create', 'NursesController@store');
+//storing records
+Route::post('/labs' , 'LabController@store');
 
-// Update a patient file
+
+
+
+// Update a nurse file
 Route::put('/nurses/{id}', 'NursesController@update');
 
-// Delete a patient file
+
+// Delete a nurse file
 Route::delete('/nurses/{id}', 'NursesController@delete');
+//deleting records
+Route::delete('/labs/{lab}', 'LabController@destroy');

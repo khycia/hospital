@@ -3,7 +3,7 @@
             <div class="col-sm-12">
                 <h5>VIEW nurses INFO</h5>
                 <a href="/nurses/{{ $nurse-> id }}/edit">Edit</a>
-                <h5>Name: {{ $patient->name }}</h5>
+                <h5>Name: {{ $nurse->name }}</h5>
                 <h5>ID: {{ $nurse->id }}</h5>
                 <h5>Contact no.:{{ $nurse->contact }}</h5>
                 <h5>Department: {{ $nurse->department }}</h5>
