@@ -14,11 +14,11 @@ class CreateBillsTable extends Migration
     public function up()
     {
         Schema::create('bills', function (Blueprint $table) {
-            $table->bigIncrements('receipt_number');
-            $table->foreignId('patient_id');
-            $table->foreignId('doctor_id');
-            $table->foreignId('nurse_id');
-            $table->foreignId('healthcare_type')->nullable();
+            $table->id();
+            $table->integer('patient_id');
+            $table->integer('doctor_id');
+            $table->integer('nurse_id');
+            $table->integer('healthcare_type')->nullable();
             $table->integer('discount')->nullable();
             $table->integer('room_charge')->nullable();
             $table->integer('no_of_days')->nullable();

@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/bills', 'BillsController@index');
+
+Route::get('/bills/create', 'BillsController@create');
+
+Route::get('/bills/{bill}', 'BillsController@show');
+
+Route::get('/bills/{bill}/edit', 'BillsController@edit');
+
+Route::post('/bills', 'BillsController@store');
+
+Route::put('/bills/{bill}', 'BillsController@update');
+
+Route::delete('/bills/{bill}/delete', 'BillsController@delete');
