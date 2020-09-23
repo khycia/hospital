@@ -18,7 +18,7 @@ class CreateLabTable extends Migration
             $table->foreignId('patient_id');
             $table->foreignId('doctor_id');
             $table->dateTime('date');
-            $table->float('amount');
+            $table->float('amount'); 
         });
     }
 
