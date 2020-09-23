@@ -11,9 +11,9 @@ class OutPatientsController extends Controller
 	  	return view('outpatients.index', compact('outpatients'));
 	  }
 
-	  public function show($patient_id)
+	  public function show(outpatients $outpatients)
 	  {
-	  	$outpatients = outpatients::find($patient_id);
+	  
 	     //dd($outpatient);
          return view('outpatients.show', compact('outpatients'));
 	  	 	  }
@@ -21,30 +21,34 @@ class OutPatientsController extends Controller
 	  	 	  	return view('outpatients.create');
 	  	 	  }
 	  	 	  public function store() {
-	  	 	  	$outpatients = new Outpatient;
-	  	 	  	$outpatients->diagnosis= request()-> diagnosis;
-	  	 	  	 $outpatients->name= request()-> name;
-	  	 	    $outpatients->save();
 
+	  	 	  
+	  	 	  	$outpatients = new outpatients;
+	  	 	  	$outpatients->name = request()->name;
+	  	 	  	$outpatients->diagnosis = request()->diagnosis;
+	  	 	  	$outpatients->save();
 
+	  	 	return redirect('/');
+	  	 	 
+	  	 	 
+            
 
-	  	 	    return redirect('/');
                  
 
 	  	 	  }
 
 
-	  	 	  public function edit(Outpatients $outpatients) {
+	  	 	  public function edit(outpatients $outpatients) {
 
 	  	 	  	return view('outpatients.edit', compact('outpatients'));
 	  	 	  }
 
-	  	 	  public function update(Outpatients $outpatients) {
+	  	 	  public function update(outpatients $outpatients) {
 
 	  	 	  	$outpatients->diagnosis= request()-> diagnosis;
 	  	 	  	 $outpatients->name= request()-> name;
                    $outpatients->save();
-                    return redirect('/outpatients/' .$outpatients->patient_id);
+                    return redirect('/outpatients/' .$outpatients->id);
 	  	 	  }
 
 	  	 	  public function destroy (Outpatients $outpatients) {

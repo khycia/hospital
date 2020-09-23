@@ -14,7 +14,7 @@ class CreateOutpatientsTable extends Migration
     public function up()
     {
         Schema::create('outpatients', function (Blueprint $table) {
-             $table->id('patient_id;');
+             $table->id('id');
              $table->string('name')
              $table->text('diagnosis');
               $table->foreignID('lab_number');
