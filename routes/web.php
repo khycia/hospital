@@ -1,5 +1,7 @@
 <?php
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,16 +12,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('welcome');
+});
 
-//1ST ROUTE
-Route::view('/', 'testview');
-//2ND ROUTE	
-Route::get('/testview','TestViewController@TestView');
-//3RD ROUTE
-Route::get('/products', 'DumpandDieController@DumpAndDie');
-//4TH ROUTE 
-Route::get('/redirect', 'RedirectController@RedirectRoute')->name('SecondRoute'); 
-//5TH ROUTE
-Route::get('/variables', 'TwoVariablesController@TwoVariables'); 
-//6TH ROUTE
-Route::get('/foods','ArrayController@masakitarray'); 
+// Display nurses table
+Route::get('/nurses', 'NursesController@index');
+// Create a patient file
+Route::get('/nurses/create', 'NursesController@create');
+// Display a patient from patients table
+Route::get('/nurses/{id}', 'NursesController@show');
+// Edit a patient file
+Route::get('/nurses/{id}/edit', 'NursesController@edit');
+
+// Store a created patient file
+Route::post('/nurses/create', 'NursesController@store');
+
+// Update a patient file
+Route::put('/nurses/{id}', 'NursesController@update');
+
+// Delete a patient file
+Route::delete('/nurses/{id}', 'NursesController@delete');
