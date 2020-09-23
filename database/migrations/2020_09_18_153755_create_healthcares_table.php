@@ -14,7 +14,7 @@ class CreateHealthcaresTable extends Migration
     public function up()
     {
         Schema::create('healthcares', function (Blueprint $table) {
-            $table->foreignId('healthcare_id');
+            $table->id('id');
             $table->string('title');
             $table->decimal('discount',3,2);
             $table->timestamps();
