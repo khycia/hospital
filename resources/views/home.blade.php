@@ -1,6 +1,4 @@
 @extends('layouts.master')
-@extends('layouts.head')
-@yield('head')
 @section('content')
 
      <!-- HOME -->

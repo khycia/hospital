@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Health - Medical Website Template</title>
+     <title>Hospital Information System</title>
 <!--
 
 Template 2098 Health
@@ -17,17 +17,16 @@ http://www.tooplate.com/view/2098-health
      <meta name="author" content="Tooplate">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/animate.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/css/font-awesome.min.css">
+     <link rel="stylesheet" href="/css/animate.css">
+     <link rel="stylesheet" href="/css/owl.carousel.css">
+     <link rel="stylesheet" href="/css/owl.theme.default.min.css">
 
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/tooplate-style.css">
+     <link rel="stylesheet" href="/css/tooplate-style.css">
 
-</head>
-<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+</head><body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
      <!-- PRE LOADER -->
      <section class="preloader">
@@ -44,7 +43,7 @@ http://www.tooplate.com/view/2098-health
           <div class="container">
                <div class="row">
 
-                    <div class="col-md-4 col-sm-5">
+                    <div class="col-md-4 collapse-sm-5">
                          <p>Welcome to a CIT17-3C Group 4's page</p>
                     </div>
                          
@@ -70,7 +69,7 @@ http://www.tooplate.com/view/2098-health
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="/home" class="navbar-brand"><i class="fa fa-h-square"></i>ospital Information System</a>
+                    <a href="/" class="navbar-brand"><i class="fa fa-h-square"></i>ospital Information System</a>
                </div>
 
                <!-- MENU LINKS -->
@@ -110,7 +109,7 @@ http://www.tooplate.com/view/2098-health
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">Latest News</h4>
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="/images/news-image.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
                                         <a href="#"><h5>Amazing Technology</h5></a>
@@ -120,7 +119,7 @@ http://www.tooplate.com/view/2098-health
 
                               <div class="latest-stories">
                                    <div class="stories-image">
-                                        <a href="#"><img src="images/news-image.jpg" class="img-responsive" alt=""></a>
+                                        <a href="#"><img src="/images/news-image.jpg" class="img-responsive" alt=""></a>
                                    </div>
                                    <div class="stories-info">
                                         <a href="#"><h5>New Healing Process</h5></a>
@@ -175,14 +174,14 @@ http://www.tooplate.com/view/2098-health
      </footer>
 
      <!-- SCRIPTS -->
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/jquery.sticky.js"></script>
-     <script src="js/jquery.stellar.min.js"></script>
-     <script src="js/wow.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/custom.js"></script>
+     <script src="/js/jquery.js"></script>
+     <script src="/js/bootstrap.min.js"></script>
+     <script src="/js/jquery.sticky.js"></script>
+     <script src="/js/jquery.stellar.min.js"></script>
+     <script src="/js/wow.min.js"></script>
+     <script src="/js/smoothscroll.js"></script>
+     <script src="/js/owl.carousel.min.js"></script>
+     <script src="/js/custom.js"></script>
 
 </body>
 </html>

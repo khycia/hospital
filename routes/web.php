@@ -13,9 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
+// Display patients table	
 Route::get('/patients', 'PatientsController@index');
+// Create a patient file
+Route::get('/patients/create', 'PatientsController@create');
+// Display a patient from patients table
+Route::get('/patients/{patient_id}', 'PatientsController@show');
+// Edit a patient file
+Route::get('/patients/{patient_id}/edit', 'PatientsController@edit');
 
+// Store a created patient file
+Route::post('/patients/create', 'PatientsController@store');
+
+// Update a patient file
+Route::put('/patients/{patient_id}', 'PatientsController@update');
+
+// Delete a patient file
+Route::delete('/patients/{patient_id}', 'PatientsController@destroy');
