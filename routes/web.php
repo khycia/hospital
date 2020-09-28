@@ -31,3 +31,17 @@ Route::put('/patients/{patient_id}', 'PatientsController@update');
 
 // Delete a patient file
 Route::delete('/patients/{patient_id}', 'PatientsController@destroy');
+
+Route::get('/login', 'AuthController@index')->name('login');
+Route::post('/login', 'AuthController@login');
+
+Route::middleware(['auth'])->group(function()
+{
+	Route::get('/dashboard', 'DashboardController@index');
+	Route::get('/logout', 'AuthController@logout');	
+});
+
+Route::get('/register', 'AuthController@register');
+
+Route::post('/register', 'AuthController@store');
+

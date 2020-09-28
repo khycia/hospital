@@ -5,6 +5,7 @@
 	  <h4>Create Patient File</h4>		
 	  <div class="row">
 	    <form class="col s12" action="/patients/create" method="POST">
+	    @include('layouts.errors')
 	    @csrf
 	      <div class="row">
 	        <div class="input-field col s6">

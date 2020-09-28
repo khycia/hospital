@@ -5,6 +5,7 @@
 	  <h4>Update Patient File</h4>		
 	  <div class="row">
 	    <form class="col s12" action="/patients/{{ $patient->patient_id}}" method="POST">
+	    @include('layouts.errors')
 	    @method('PUT')
 	    @csrf
 	      <div class="row">

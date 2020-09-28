@@ -49,7 +49,8 @@ http://www.tooplate.com/view/2098-health
                          
                     <div class="col-md-8 col-sm-7 text-align-right">
                          <span class="phone-icon"><i class="fa fa-phone"></i> 010-060-0160</span>
-                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i>atg6478@students.uc-bcf.edu</span>
+                         <!--<button class = "section-btn" type="submit" name="action">Submit</button>-->
                     </div>
 
                </div>
@@ -71,17 +72,6 @@ http://www.tooplate.com/view/2098-health
                     <!-- lOGO TEXT HERE -->
                     <a href="/" class="navbar-brand"><i class="fa fa-h-square"></i>ospital Information System</a>
                </div>
-
-               <!-- MENU LINKS -->
-               <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                         <li><a href="/patients">Patients</a></li>
-                         <!--<li><a href="#about" class="smoothScroll">About Us</a></li>
-                         <li><a href="#team" class="smoothScroll">Doctors</a></li>
-                         <li class="appointment-btn"><a href="#appointment">Make an appointment</a></li> -->
-                    </ul>
-               </div>
-
           </div>
      </section>
 
