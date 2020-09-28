@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/','Controller@index');
 
 Route::get('/inpatients', 'inpatientsController@index');
 
@@ -27,3 +28,7 @@ Route::get('/inpatients/{inpatient}/edit','inpatientsController@edit');
 Route::put('/inpatients/{inpatient}','inpatientsController@update');
 
 Route::delete('/inpatients/{inpatient}/delete','inpatientsController@delete');
+
+Route::get('/register','AuthController@register');
+
+Route::post('/register','AuthController@store');
