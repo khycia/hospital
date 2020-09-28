@@ -30,6 +30,17 @@ class DoctorsController extends Controller
     public function store()
 
     {
+    	request()->validate([
+
+    		'name' => 'required',
+    		'contact' => 'required|unique:doctor',
+    		'position' =>'required',
+    		'department' => 'required'
+
+
+    	]);
+
+    		
     	$doctor = new Doctor;
     	$doctor->name = request()->name;
     	$doctor->contact = request()->contact;
@@ -49,6 +60,17 @@ class DoctorsController extends Controller
 
     public function update(Doctor $doctor)
     {
+
+    	request()->validate([
+
+    		'name' => 'required',
+    		'contact' => 'required|unique:doctor',
+    		'position' =>'required',
+    		'department' => 'required'
+
+
+    	]);
+    	
     	$doctor->name = request()->name;
     	$doctor->contact = request()->contact;
     	$doctor->position = request()->position;
