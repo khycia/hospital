@@ -18,15 +18,19 @@
           <input id="diagnosis" type="text" class="validate" name="diagnosis">
           <label for="diagnosis">Diagnosis</label>
         </div>
+   
+       <div class="input-field col s6">
+          <input id="lab_number" type="text" class="validate" name="lab_number">
+          <label for="lab_number">Lab_number</label>
+        </div>
       </div>
-       
+       </form>
+   </div>
 
-
-      </div>
-     
+  
       </div>
        <div class -"row">
-      <div class="col s12">
+      <div class="col s14">
       	<button class="btn waves-effect waves-light" type="submit" name="action"> Submit
       		<i class = "material-icons right">send</i>
       		

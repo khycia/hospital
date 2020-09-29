@@ -8,6 +8,10 @@ Route::get('/', 'OutPatientsController@return');
 
 
 Route::get('/outpatients/create', 'OutPatientsController@create');
+
+Route::get('/register', 'OutPatientsController@register');
+
+Route::post('/register', 'OutPatientsController@registore');
 Route::get('/outpatients/{outpatients}', 'OutPatientsController@show');
 
 

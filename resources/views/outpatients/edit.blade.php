@@ -19,6 +19,10 @@
           <input id="diagnosis" type="text" class="validate" name="diagnosis" value='{{ $outpatients->diagnosis }}'>
           <label for="diagnosis">Diagnosis</label>
         </div>
+          <div class="input-field col s6">
+          <input id="lab_number" type="text" class="validate" name="lab_number" value='{{ $outpatients->lab_number }}'>
+          <label for="diagnosis">Lab Number</label>
+        </div>
       </div>
 
 
