@@ -12,6 +12,11 @@ class HealthcaresController extends Controller
     }
 
     public function store() {
+    	request()->validate([
+			'title' => 'required',
+    		'disount' => 'required'
+    	]);
+
     	$healthcare = new Healthcare;
     	$healthcare->title = request()->title;
     	$healthcare->discount = request()->discount;
@@ -25,6 +30,11 @@ class HealthcaresController extends Controller
     }
     
     public function update(Healthcare $healthcare) {
+    	request()->validate([
+			'title' => 'required',
+    		'disount' => 'required'
+    	]);
+    	
     	$healthcare->title = request()->title;
     	$healthcare->discount = request()->discount;
     	$healthcare->save();

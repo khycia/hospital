@@ -12,6 +12,11 @@ class RoomsController extends Controller
     }
 
     public function store() {
+		request()->validate([
+			'room_type' => 'required',
+    		'ward' => 'required'
+    	]);
+
     	$room = new Room;
     	$room->room_type = request()->room_type;
     	$room->ward = request()->ward;
@@ -25,6 +30,11 @@ class RoomsController extends Controller
     }
 
     public function update(Room $room) {
+    	request()->validate([
+			'room_type' => 'required',
+    		'ward' => 'required'
+    	]);
+    	
     	$room->room_type = request()->room_type;
     	$room->ward = request()->ward;
     	$room->save();
