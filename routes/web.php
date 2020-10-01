@@ -56,3 +56,18 @@ Route::put('/nurses/{id}', 'NursesController@update');
 Route::delete('/nurses/{id}', 'NursesController@delete');
 //deleting records
 Route::delete('/labs/{lab}', 'LabController@destroy');
+
+//login page
+Route::get('/login', 'AuthController@index')->name('login');
+Route::post('/login', 'AuthController@login');
+
+//dashboard
+Route::middleware(['auth'])->group(function()
+{
+	Route::get('/dashboard', 'DashboardController@index');
+	Route::get('/logout', 'AuthController@logout');	
+});
+//register page
+Route::get('/register', 'AuthController@register');
+
+Route::post('/register', 'AuthController@store');

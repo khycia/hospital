@@ -13,16 +13,16 @@ class CreateNursesTable extends Migration
      */
     public function up()
     {
-        Schema::create('nurses', function (Blueprint $table) {
+        Schema::create('_nurses_', function (Blueprint $table) {
+       
             $table->increments('id');
              $table->string('name');
               $table->int('contact_number');
                $table->string('department');
+                  $table->timestamps();
 
 
 
-
-         
         });
     }
 
@@ -33,6 +33,8 @@ class CreateNursesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nurses');
+        Schema::dropIfExists('_nurses_');
     }
 }
+
+

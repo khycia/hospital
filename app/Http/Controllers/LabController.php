@@ -13,6 +13,14 @@ class LabController extends Controller
     }
 
     public function store() {
+
+         request()->validate([
+
+            'lab' => 'required',
+            'date' => 'required|unique:nurse',
+            'amount' =>'required',
+           
+        ]);
     	$lab = new Lab;
     	$lab->date = request()->date;
     	$lab->amount = request()->amount;
@@ -33,6 +41,15 @@ class LabController extends Controller
     }
 
     public function update(Lab $lab) {
+
+
+        request()->validate([
+
+            'lab' => 'required',
+            'date' => 'required|unique:nurse',
+            'amount' =>'required',
+           
+        ]);
     	$lab->date = request()->date;
     	$lab->amount = request()->amount;
     	$lab>save();

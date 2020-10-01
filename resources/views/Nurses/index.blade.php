@@ -1,7 +1,7 @@
 <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h3>nurses INFO</h3>
+                <h3>NURSES INFO</h3>
                 <ol>
                     @foreach($nurses as $nurse)
                         <li>
