@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
 //fromEsmallaDev
 //displaying rooms
 Route::get('/showrooms' , 'PagesController@showrooms');
@@ -131,5 +132,29 @@ Route::get('/inpatients/{inpatient}/edit','inpatientsController@edit');
 Route::put('/inpatients/{inpatient}','inpatientsController@update');
 
 Route::delete('/inpatients/{inpatient}/delete','inpatientsController@delete');
+
+
+//fromJoshueDev
+//Route::get('/', 'DoctorsController@index');
+
+//CREATE FORM
+Route::get('/doctors/create', 'DoctorsController@create');
+
+Route::get('/doctors/{id}', 'DoctorsController@show');
+
+
+//EDIT DISPLAY THE UPDATE FORM
+Route::get('/doctors/{doctor}/edit', 'DoctorsController@edit');
+
+
+//STORE A RECORD
+Route::post('/doctors', 'DoctorsController@store');
+
+
+// UPDATE DOCTORS
+Route::put('/doctors/{doctor}', 'DoctorsController@update');
+
+// DELETE FORM
+Route::delete('/doctors/{doctor}', 'DoctorsController@destroy');
 
 
