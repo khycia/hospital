@@ -4,11 +4,8 @@
 
      <title>Hospital Information System</title>
 <!--
-
 Template 2098 Health
-
 http://www.tooplate.com/view/2098-health
-
 -->
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
