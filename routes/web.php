@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 
+
 //fromEsmallaDev
 //displaying rooms
 Route::get('/showrooms' , 'PagesController@showrooms');
@@ -71,7 +72,7 @@ Route::post('/register', 'AuthController@store');
 
 
 
-
+//fromAldwinDev
 Route::get('/', 'OutPatientsController@return');
 
 
@@ -96,4 +97,20 @@ Route::delete('/outpatients/{outpatients}', 'OutPatientsController@destroy');
 //Route::get('/templates/another-page','OutPatientsController@anotherPage');
 //Route::get('/outpatients/{outpatients}',' OutPatientsController@index');
 //Route::get('/outpatients/create',' OutPatientsController@index');
+
+
+//fromGreggyDev
+Route::get('/bills', 'BillsController@index');
+
+Route::get('/bills/create', 'BillsController@create');
+
+Route::get('/bills/{bill}', 'BillsController@show');
+
+Route::get('/bills/{bill}/edit', 'BillsController@edit');
+
+Route::post('/bills', 'BillsController@store');
+
+Route::put('/bills/{bill}', 'BillsController@update');
+
+Route::delete('/bills/{bill}/delete', 'BillsController@delete');
 
