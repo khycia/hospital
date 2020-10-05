@@ -2,19 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-
-
+//fromEsmallaDev
 //displaying rooms
 Route::get('/showrooms' , 'PagesController@showrooms');
 Route::get('/showrooms/{room}' , 'PagesController@roomInfo');
@@ -44,6 +33,9 @@ Route::put('/healthcares/{healthcare}', 'HealthcaresController@update');
 Route::delete('/rooms/{room}', 'RoomsController@destroy');
 Route::delete('/healthcares/{healthcare}', 'HealthcaresController@destroy');    
 
+
+
+//fromAdrianDev
 Route::get('/', 'HomeController@index');
 // Display patients table	
 Route::get('/patients', 'PatientsController@index');
@@ -76,4 +68,32 @@ Route::get('/register', 'AuthController@register');
 
 Route::post('/register', 'AuthController@store');
 
+
+
+
+
+Route::get('/', 'OutPatientsController@return');
+
+
+Route::get('/outpatients/create', 'OutPatientsController@create');
+
+//Route::get('/register', 'OutPatientsController@register');
+
+//Route::post('/register', 'OutPatientsController@registore');
+Route::get('/outpatients/{outpatients}', 'OutPatientsController@show');
+
+
+Route::get('/outpatients/{outpatients}/edit', 'OutPatientsController@edit');
+
+Route::post('/outpatients', 'OutPatientsController@store');
+
+Route::put('/outpatients/{outpatients}', 'OutPatientsController@update');
+
+
+Route::delete('/outpatients/{outpatients}', 'OutPatientsController@destroy');
+
+//Route::get('/templates','OutPatientsController@temp');
+//Route::get('/templates/another-page','OutPatientsController@anotherPage');
+//Route::get('/outpatients/{outpatients}',' OutPatientsController@index');
+//Route::get('/outpatients/create',' OutPatientsController@index');
 
