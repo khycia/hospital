@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class inpatient extends Model
+class Inpatient extends Model
 {
      protected $guarded=[];
 }

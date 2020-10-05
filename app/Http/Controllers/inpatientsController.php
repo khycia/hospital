@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\inpatient;
+use App\Inpatient;
 use Illuminate\Http\Request;
 
-class inpatientsController extends Controller
+class InpatientsController extends Controller
 {
     public function index()
     {
-    	$inpatients= inpatient::all();
+    	$inpatients= Inpatient::all();
     	return view('inpatients.index', compact('inpatients'));
     }
 
-    public function show(inpatient $inpatient)
+    public function show(Inpatient $inpatient)
     {	
     	return view('inpatients.show', compact('inpatient')); 
     }
@@ -23,7 +23,7 @@ class inpatientsController extends Controller
     }
 
     public function store(){
-    	$inpatient = new inpatient;
+    	$inpatient = new Inpatient;
 
     	$inpatient-> create([
     		'name' => request()->name,
@@ -33,12 +33,12 @@ class inpatientsController extends Controller
     	return redirect('/inpatients');
     }
 
-    public function edit(inpatient $inpatient)
+    public function edit(Inpatient $inpatient)
     {
     	return view ('inpatients.edit', compact('inpatient'));
     }
 
-    public function update(inpatient $inpatient)
+    public function update(Inpatient $inpatient)
     {
     	$inpatient->update([
     		'name' => request()->name,
@@ -48,7 +48,7 @@ class inpatientsController extends Controller
     	return redirect('/inpatients');
     }
 
-    public function delete(inpatient $inpatient)
+    public function delete(Inpatient $inpatient)
     {
     	$inpatient->delete();
     	return redirect ('/inpatients');

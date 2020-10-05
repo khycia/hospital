@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\outpatients;
+use App\Outpatient;
 
-class OutPatientsController extends Controller
+class OutpatientsController extends Controller
 {
 	  public function return() {
-	  	$outpatients = outpatients::all();
+	  	$outpatients = Outpatient::all();
 	  	return view('outpatients.index', compact('outpatients'));
 	  }
 
-	  public function show(outpatients $outpatients)
+	  public function show(Outpatient $outpatients)
 	  {
 	  
 	     //dd($outpatient);
@@ -41,7 +41,7 @@ class OutPatientsController extends Controller
               $validated_fields['lab_number'] = bcrypt($validated_fields['lab_number']);
             
 
-              $outpatients = outpatients::create($validated_fields );
+              $outpatients = Outpatient::create($validated_fields );
               return redirect('/');
 
           
@@ -50,7 +50,7 @@ class OutPatientsController extends Controller
 	  	 	  public function store() {
 
 	  	 	  
-	  	 	  	$outpatients = new outpatients;
+	  	 	  	$outpatients = new Outpatient;
 	  	 	  	$outpatients->name = request()->name;
 	  	 	  	$outpatients->diagnosis = request()->diagnosis;
 	  	 	  	$outpatients->lab_number = request()->lab_number;
