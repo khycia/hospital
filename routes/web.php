@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
 //fromEsmallaDev
 //displaying rooms
 Route::get('/showrooms' , 'PagesController@showrooms');
@@ -113,4 +114,22 @@ Route::post('/bills', 'BillsController@store');
 Route::put('/bills/{bill}', 'BillsController@update');
 
 Route::delete('/bills/{bill}/delete', 'BillsController@delete');
+
+
+//fromRyanDev
+
+Route::get('/inpatients', 'inpatientsController@index');
+
+Route::get('/inpatients/create', 'inpatientsController@create');
+
+Route::get('/inpatients/{inpatient}', 'inpatientsController@show');
+
+Route::post('/inpatients', 'inpatientsController@store');
+
+Route::get('/inpatients/{inpatient}/edit','inpatientsController@edit');
+
+Route::put('/inpatients/{inpatient}','inpatientsController@update');
+
+Route::delete('/inpatients/{inpatient}/delete','inpatientsController@delete');
+
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+
 use Illuminate\Http\Request;
 use App\User;
 
@@ -45,12 +46,7 @@ class AuthController extends Controller
     	$validated_fields = request()->validate([
     		'name' => 'required',
     		'email' => 'required|unique:users',
-    		'password' => 'required'
-    	]);
-
-    	$validated_fields['password'] = bcrypt($validated_fields['password']);
-    	$user = User::create($validated_fields);
-
     	return redirect('/login');
     }
 }
+
