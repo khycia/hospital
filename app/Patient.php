@@ -8,4 +8,9 @@ class Patient extends Model
 {
 	protected $table = 'patients';
     protected $primaryKey = 'patient_id';
+
+    public function inpatients()
+    {
+    	return $this->hasMany(inpatients::class);
+    }
 }
