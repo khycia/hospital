@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Outpatients;
 class OutpatientsSeeder extends Seeder
 {
     /**
@@ -11,15 +12,19 @@ class OutpatientsSeeder extends Seeder
     public function run()
     {
         // insert default var
+ $outpatients = Outpatients::all();
+        foreach($outpatients as $outpatient) {
+         	for($random_number = mt_rand(3,5); $random_number > 0; $random_number--) {
+         		outpatients::create([
+                'name' => 'name' .mt_rand(10,100),
+                'diagnosis' => 'diagnosis' .mt_rand(1,10),
+                 'lab_number' => mt_rand(1,100)
+      ] );
 
-      $outpatients = [
-        	['name' => 'Jeff', 'diagnosis' => 'Diabetes6' ],
-            ['name' => 'Jeff2', 'diagnosis' => 'Diabetes5' ],
-            ['name' => 'Jeff3', 'diagnosis' => 'Diabetes4' ],
-            ['name' => 'Jeff4', 'diagnosis' => 'Diabetes3' ],
-            ['name' => 'Jeff5', 'diagnosis' => 'Diabetes2' ],
-	
-        ];
-        DB::table('outpatients')->insert($outpatients);
-    }
-}
+           }
+        }
+     }
+  }
+
+       
+ 

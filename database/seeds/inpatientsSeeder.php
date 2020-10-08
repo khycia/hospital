@@ -12,22 +12,16 @@ class inpatientsSeeder extends Seeder
      */
     public function run()
     {
-        $inpatients = Inpatient::all();
-        foreach($inpatients as $inpatient) {
-         	for($random_number = mt_rand(3,5); $random_number > 0; $random_number--) {
-         		inpatient::create([
-                'name' => 'name' .mt_rand(10,100),
-                'diagnosis' => 'diagnosis' .mt_rand(1,10),
-                 'room_number' => 'room_number' .mt_rand(1,10000)
-   
-   
-  
+       
 
-
-         		]);
-
-
-
+  $inpatients = [
+        	['name' => 'Jeff', 'diagnosis' => 'Diabetes6' ],
+            ['name' => 'Jeff2', 'diagnosis' => 'Diabetes5' ],
+            ['name' => 'Jeff3', 'diagnosis' => 'Diabetes4' ],
+            ['name' => 'Jeff4', 'diagnosis' => 'Diabetes3' ],
+            ['name' => 'Jeff5', 'diagnosis' => 'Diabetes2' ],
+	
+        ];
 
 
         	}
