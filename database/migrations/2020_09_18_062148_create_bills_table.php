@@ -15,6 +15,7 @@ class CreateBillsTable extends Migration
     {
         Schema::create('bills', function (Blueprint $table) {
             $table->id();
+            $table->integer('receipt_number');
             $table->integer('patient_id');
             $table->integer('doctor_id');
             $table->integer('nurse_id');
