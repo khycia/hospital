@@ -75,7 +75,7 @@ Route::post('/register', 'AuthController@store');
 
 
 //fromAldwinDev
-Route::get('/', 'OutPatientsController@return');
+Route::get('/outpatients', 'OutPatientsController@return');
 
 
 Route::get('/outpatients/create', 'OutPatientsController@create');
@@ -175,6 +175,6 @@ Route::put('/nurses/{id}', 'NursesController@update');
 
 
 //1ST ROUTE	// Delete a patient file
-Route::view('/', 'testview');	Route::delete('/nurses/{id}', 'NursesController@delete'); 
+Route::delete('/nurses/{id}', 'NursesController@delete'); 
 
 

@@ -45,7 +45,9 @@ class AuthController extends Controller
     {
     	$validated_fields = request()->validate([
     		'name' => 'required',
-    		'email' => 'required|unique:users',
+            'password' => 'required',
+    		'email' => 'required|unique:users'
+        ]);
     	return redirect('/login');
     }
 }
