@@ -75,7 +75,7 @@ Route::post('/register', 'AuthController@store');
 
 
 //fromAldwinDev
-Route::get('/', 'OutPatientsController@return');
+Route::get('/outpatients', 'OutPatientsController@return');
 
 
 Route::get('/outpatients/create', 'OutPatientsController@create');
@@ -88,7 +88,8 @@ Route::get('/outpatients/{outpatients}', 'OutPatientsController@show');
 
 Route::get('/outpatients/{outpatients}/edit', 'OutPatientsController@edit');
 
-Route::post('/outpatients', 'OutPatientsController@store');
+
+Route::post('/outpatients/create', 'OutPatientsController@store');
 
 Route::put('/outpatients/{outpatients}', 'OutPatientsController@update');
 

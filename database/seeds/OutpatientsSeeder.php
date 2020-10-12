@@ -18,7 +18,7 @@ class OutpatientsSeeder extends Seeder
          		outpatients::create([
                 'name' => 'name' .mt_rand(10,100),
                 'diagnosis' => 'diagnosis' .mt_rand(1,10),
-                 'lab_number' => mt_rand(1,100)
+                 'lab_number' => '000-' .mt_rand(1,100)
       ] );
 
            }

@@ -41,11 +41,12 @@
             "database/factories"
         ]
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
+   "autoload-dev": {
+    "classmap": [
+        "tests",
+        "database/"
+    ]
+},
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {

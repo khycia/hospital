@@ -9,9 +9,16 @@ class Outpatients extends Model
 protected $guarded = [];  
 
 
- public function inpatients()
+ public function outpatients()
  {
   return $this->hasMany(inpatients::class);
+
+ }
+
+ public function full_name() {
+
+   return $this->last_name. ' ' .$this->diagnosis. '' .$this->lab_number;
+
 
  }
 
