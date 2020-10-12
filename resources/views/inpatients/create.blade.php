@@ -9,6 +9,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12"><br>
+				<p>Create inpatient</p>
 				<form action="/inpatients" method="POST">
 					@csrf
 					<label>Name: </label>

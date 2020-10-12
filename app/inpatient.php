@@ -13,5 +13,10 @@ class Inpatient extends Model
       {
       	return $this->belongsTo(Patients::class);
       }
+
+      public function name_diagnosis()
+      {
+      	return $this->name.' has diagnosis of '.$this->diagnosis;
+      }
 }
  

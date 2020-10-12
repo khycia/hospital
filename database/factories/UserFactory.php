@@ -29,3 +29,12 @@ $factory->define(User::class, function (Faker $faker) {
     ];
 });
 
+$factory->define(inpatient::class, function(Faker $faker){
+	return[
+	
+		'name' => $faker->name,
+		'diagnosis' => $faker-> word,
+		'room_number'=> $faker->buildingNumber
+	];
+});
+

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Inpatient;
+use App\inpatient;
 use Illuminate\Http\Request;
 
 class InpatientsController extends Controller
@@ -24,7 +24,6 @@ class InpatientsController extends Controller
 
     public function store(){
     	$inpatient = new Inpatient;
-
     	$inpatient-> create([
     		'name' => request()->name,
     		'diagnosis' => request()->diagnosis,
