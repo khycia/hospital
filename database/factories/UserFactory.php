@@ -3,6 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\User;
+use App\Outpatients;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -26,3 +27,16 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+
+$factory->define(Outpatients::class, function( Faker $faker) {
+      return [
+      	  'name' =>  $faker->lastName,
+      	   'diagnosis' => $faker->word,
+      	   'lab_number' => $faker->randomNumber($nbDigits = NULL, $strict = false) ,
+
+      ];
+      });
+
+
+

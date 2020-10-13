@@ -1,17 +1,34 @@
-@extends('layout.master')
-
+@extends('layouts.master')
 @section('content')
-<div class="container">
-	<div class="col=sm-12">
-		<h5> OutPatients</h5>
-		<a href="/outpatients/create">Create Outpatient </a>
-		<ol> 
-		@foreach($outpatients as $outpatient)
-		<li>
-			<a href="/outpatients/{{ $outpatient->id}}">{{  $outpatient -> name}}</a></li>
-
-
-		@endforeach
-		</ol>
-</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Outpatients</h3>
+				<button class = "section-btn"><a href="outpatients/create">Create Outpatient File</a></button>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Outpatient name</th>
+							<th>Outpatient diagnosis</th>
+							<th>Lab Number</th>
+						
+						</tr>
+					</thead>
+					<tbody>
+						@foreach($outpatients as $outpatient)
+						
+							<tr>
+								<td><a href="/outpatients/{{ $outpatient->id}}">{{  $outpatient -> name}}</a></li></td> 
+						
+								<td>{{ $outpatient->diagnosis }}</td>
+								<td>{{ $outpatient->lab_number}}</td>
+							</tr>
+							</tr>
+					
+						@endforeach
+					</tbody>
+				</table>	
+			</div>
+		</div>
+	</div>
 @endsection

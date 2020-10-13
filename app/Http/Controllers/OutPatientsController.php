@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Outpatients;
 use Illuminate\Http\Request;
-use App\Outpatient;
+
 
 class OutpatientsController extends Controller
 {
 	  public function return() {
-	  	$outpatients = Outpatient::all();
+	  	$outpatients = Outpatients::all();
 	  	return view('outpatients.index', compact('outpatients'));
 	  }
-
-	  public function show(Outpatient $outpatients)
+	  public function show(Outpatients $outpatients)
 	  {
 	  
 	     //dd($outpatient);
@@ -30,7 +30,7 @@ class OutpatientsController extends Controller
 	  	 	  }
 
 	  	 	  public function registore () {
-              $validated_fields = request()-> validate([
+	  	 	   $validated_fields = request()-> validate([
                	'name' => 'required',
                	'diagnosis' => 'required',
                	'lab_number' => 'required|unique:outpatients'
@@ -41,7 +41,7 @@ class OutpatientsController extends Controller
               $validated_fields['lab_number'] = bcrypt($validated_fields['lab_number']);
             
 
-              $outpatients = Outpatient::create($validated_fields );
+              $outpatients = Outpatients::create($validated_fields );
               return redirect('/');
 
           
@@ -50,7 +50,7 @@ class OutpatientsController extends Controller
 	  	 	  public function store() {
 
 	  	 	  
-	  	 	  	$outpatients = new Outpatient;
+	  	 	  	$outpatients = new outpatients;
 	  	 	  	$outpatients->name = request()->name;
 	  	 	  	$outpatients->diagnosis = request()->diagnosis;
 	  	 	  	$outpatients->lab_number = request()->lab_number;
@@ -76,7 +76,8 @@ class OutpatientsController extends Controller
 	  	 	  	$outpatients->diagnosis= request()-> diagnosis;
 	  	 	  	 $outpatients->name= request()-> name;
                    $outpatients->save();
-                    return redirect('/outpatients/' .$outpatients->id);
+                    return redirect('/outpatients/' .
+$outpatients->id);
 	  	 	  }
 
 	  	 	  public function destroy (Outpatients $outpatients) {
