@@ -87,7 +87,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Inpatient
+                    Inpatient.
                 </div>
 
                 <div class="links">
