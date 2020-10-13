@@ -14,7 +14,8 @@ class CreateInpatientsTable extends Migration
     public function up()
     {
         Schema::create('inpatients', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('patient_id');
             $table->string('name');
             $table->string('diagnosis');
             $table->integer('room_number');

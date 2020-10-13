@@ -22,5 +22,10 @@ public function healthcare()
     public function nurses()
     {
     	return $this->hasMany(Nurses::class);
+
+    public function inpatients()
+    {
+    	return $this->hasMany(inpatients::class);
+
     }
 }

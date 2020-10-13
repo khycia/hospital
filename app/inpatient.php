@@ -15,4 +15,15 @@ class Inpatient extends Model
      public function healthcare() {
      	return $this->hasOne(Healthcare::class);
      }
+
+     public function patients()
+      {
+      	return $this->belongsTo(Patients::class);
+      }
+
+      public function name_diagnosis()
+      {
+      	return $this->name.' has diagnosis of '.$this->diagnosis;
+      }
 }
+ 

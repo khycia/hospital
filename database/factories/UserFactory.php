@@ -4,6 +4,8 @@
 
 use App\User;
 use App\Outpatients;
+use App\inpatient;
+use App\Patient;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -39,4 +41,12 @@ $factory->define(Outpatients::class, function( Faker $faker) {
       });
 
 
+$factory->define(inpatient::class, function(Faker $faker){
+	return[
+	
+		'name' => $faker->name,
+		'diagnosis' => $faker-> word,
+		'room_number'=> $faker->buildingNumber
+	];
+});
 
