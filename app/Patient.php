@@ -14,18 +14,19 @@ public function healthcare()
     	return $this->hasOne(Healthcare::class);
     }
 
-    public function doctors()
+public function doctors()
     {
     	return $this->hasMany(Doctor::class);
     }
 
-    public function nurses()
+public function nurses()
     {
     	return $this->hasMany(Nurses::class);
+    }
 
-    public function inpatients()
+public function inpatients()
     {
-    	return $this->hasMany(inpatients::class);
+    	return $this->hasMany(inpatient::class);
 
     }
 }

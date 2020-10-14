@@ -36,8 +36,8 @@ class PatientsController extends Controller
             'contact' => 'required|unique:patients',
             'diagnosis' => 'required',
             'healthcare_type' => 'required',
-            'doctor_id' => 'required',
-            'nurse_id' => 'required'
+            'doctor' => 'required',
+            'nurse' => 'required'
         ]);
             
     	$patient = new Patient;
@@ -71,8 +71,8 @@ class PatientsController extends Controller
             'contact' => 'required|unique:patients',
             'diagnosis' => 'required',
             'healthcare_type' => 'required',
-            'doctor_id' => 'required',
-            'nurse_id' => 'required'
+            'doctor' => 'required',
+            'nurse' => 'required'
         ]);
 
     	$patient = Patient::find($patient_id);

@@ -39,6 +39,7 @@ Route::delete('/healthcares/{healthcare}', 'HealthcaresController@destroy');
 
 
 //fromAdrianDev
+// Home page
 Route::get('/', 'HomeController@index');
 // Display patients table	
 Route::get('/patients', 'PatientsController@index');
@@ -48,27 +49,23 @@ Route::get('/patients/create', 'PatientsController@create');
 Route::get('/patients/{patient_id}', 'PatientsController@show');
 // Edit a patient file
 Route::get('/patients/{patient_id}/edit', 'PatientsController@edit');
-
 // Store a created patient file
 Route::post('/patients/create', 'PatientsController@store');
-
 // Update a patient file
 Route::put('/patients/{patient_id}', 'PatientsController@update');
-
 // Delete a patient file
 Route::delete('/patients/{patient_id}', 'PatientsController@destroy');
-
+// Login to user
 Route::get('/login', 'AuthController@index')->name('login');
 Route::post('/login', 'AuthController@login');
-
+// Authenticate user
 Route::middleware(['auth'])->group(function()
 {
 	Route::get('/dashboard', 'DashboardController@index');
 	Route::get('/logout', 'AuthController@logout');	
 });
-
+// Register a new user
 Route::get('/register', 'AuthController@register');
-
 Route::post('/register', 'AuthController@store');
 
 
@@ -77,7 +74,6 @@ Route::post('/register', 'AuthController@store');
 //fromAldwinDev
 Route::get('/outpatients', 'OutPatientsController@return');
 
-
 Route::get('/outpatients/create', 'OutPatientsController@create');
 
 //Route::get('/register', 'OutPatientsController@register');
@@ -85,14 +81,11 @@ Route::get('/outpatients/create', 'OutPatientsController@create');
 //Route::post('/register', 'OutPatientsController@registore');
 Route::get('/outpatients/{outpatients}', 'OutPatientsController@show');
 
-
 Route::get('/outpatients/{outpatients}/edit', 'OutPatientsController@edit');
-
 
 Route::post('/outpatients/create', 'OutPatientsController@store');
 
 Route::put('/outpatients/{outpatients}', 'OutPatientsController@update');
-
 
 Route::delete('/outpatients/{outpatients}', 'OutPatientsController@destroy');
 
@@ -136,25 +129,17 @@ Route::delete('/inpatients/{inpatient}/delete','inpatientsController@delete');
 
 
 //fromJoshueDev
-//Route::get('/', 'DoctorsController@index');
-
+Route::get('/doctors', 'DoctorsController@index');
 //CREATE FORM
 Route::get('/doctors/create', 'DoctorsController@create');
-
+// DISPLAY
 Route::get('/doctors/{id}', 'DoctorsController@show');
-
-
 //EDIT DISPLAY THE UPDATE FORM
 Route::get('/doctors/{doctor}/edit', 'DoctorsController@edit');
-
-
 //STORE A RECORD
 Route::post('/doctors', 'DoctorsController@store');
-
-
 // UPDATE DOCTORS
 Route::put('/doctors/{doctor}', 'DoctorsController@update');
-
 // DELETE FORM
 Route::delete('/doctors/{doctor}', 'DoctorsController@destroy');
 
@@ -167,14 +152,10 @@ Route::get('/nurses/create', 'NursesController@create');
 Route::get('/nurses/{id}', 'NursesController@show');
 // Edit a patient file
 Route::get('/nurses/{id}/edit', 'NursesController@edit');
-
 // Store a created patient file
 Route::post('/nurses/create', 'NursesController@store');
-
 // Update a patient file
 Route::put('/nurses/{id}', 'NursesController@update');
-
-
 //1ST ROUTE	// Delete a patient file
 Route::delete('/nurses/{id}', 'NursesController@delete'); 
 

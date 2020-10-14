@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>EDIT LAB</title>
-</head>
-<body>
-	<h1>EDIT LAB Form</h1>
+@extends('layouts.master')
+@section('content')
+<div class = "container">
+	<h4>EDIT LAB Form</h4>
 		<form action="/lab/{{ $lab->id }}" method='POST'>
       @method('PUT')
 			@csrf
@@ -22,12 +19,11 @@
         	</div>
         	<div class="row">
       			<div class="input-field col s6">
-      				<button class="btn waves-effect waves-light" type="submit" name="action">
+      				<button class="section=btn" type="submit" name="action">
     				<i class="material-icons right">Submit</i>
   					</button>
   				</div>
       		</div>
     	</form>
-
-</body>
-</html> 
+</div>
+@endsection

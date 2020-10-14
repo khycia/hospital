@@ -1,3 +1,5 @@
+@extends('layouts.master')
+@section('content')
 <div class="container">
 
     <h4>CREATE NURSES INFO</h4>   
@@ -40,3 +42,4 @@
       </form>
     </div>
   </div>  
+  @endsection

@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Create LAB</title>
-</head>
-<body>
-	<h1>Create LAB Form</h1>
+@extends('layouts.master')
+@section('content')
+<container>
+	<h4>Create LAB Form</h4>
 		<form action="/labs" method='POST'>
 			@csrf
       		<div class="row">
@@ -21,12 +18,11 @@
         	</div>
         	<div class="row">
       			<div class="input-field col s6">
-      				<button class="btn arial" type="submit" name="action">
-    				<i class="material-icons right">OK</i>
+      				<button class="Section-btn" type="submit" name="action">
+    				<i class="material-icons right">Submit</i>
   					</button>
   				</div>
       		</div>
     	</form>
-
-</body>
-</html> 
+</container>
+@endsection

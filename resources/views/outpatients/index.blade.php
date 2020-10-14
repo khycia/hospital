@@ -4,7 +4,10 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<h3>Outpatients</h3>
+				<br>
 				<button class = "section-btn"><a href="outpatients/create">Create Outpatient File</a></button>
+				<br>
+				<br>
 				<table class="table">
 					<thead>
 						<tr>

@@ -14,14 +14,14 @@ class NursesController extends Controller
    
     public function index()
     {
-        $nurses = Nurse::all();
+        $nurses = Nurses::all();
         return view('Nurses.index', compact('nurses'));
     }
 
     public function show($id) 
     {
 
-        $nurse = Nurse::find($id);
+        $nurse = Nurses::find($id);
         return view('Nurses.show', compact('nurse'));
     }
 

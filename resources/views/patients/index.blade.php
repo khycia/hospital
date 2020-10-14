@@ -4,7 +4,10 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<h3>Patients</h3>
+				<br>
 				<button class = "section-btn"><a href="patients/create">Create Patient File</a></button>
+				<br>
+				<br>
 				<table class="table">
 					<thead>
 						<tr>
@@ -22,8 +25,8 @@
 					<tbody>
 						@foreach($patients as $patient)
 							<tr>
-								<td><a href="/patients/{{ $patient -> patient_id }}">{{ $patient->name }}</a></td>>
-								<td>{{ $patient->patient_type }}</td>>
+								<td><a href="/patients/{{ $patient -> patient_id }}">{{ $patient->name }}</a></td>
+								<td>{{ $patient->patient_type }}</td>
 								<td>{{ $patient->gender }}</td>
 								<td>{{ $patient->date_of_birth }}</td>
 								<td>{{ $patient->contact }}</td>

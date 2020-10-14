@@ -1,7 +1,12 @@
+@extends('layouts.master')
+@section('content')
 <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h3>NURSES INFO</h3>
+                <h3>Nurses</h3>
+                <br>
+                <button class = "section-btn"><a href="nurses/create">Create Nurse File</a></button>
+                <br>
                 <ol>
                     @foreach($nurses as $nurse)
                         <li>
@@ -12,4 +17,4 @@
             </div>
         </div>
     </div>
-
+@endsection

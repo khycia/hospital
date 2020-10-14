@@ -49,7 +49,7 @@ http://www.tooplate.com/view/2098-health
                          
                     <div class="col-md-8 col-sm-7 text-align-right">
                          <span class="phone-icon"><i class="fa fa-phone"></i> 010-060-0160</span>
-                         <span class="email-icon"><i class="fa fa-envelope-o"></i>atg6478@students.uc-bcf.edu</span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i>group4@uc.com</span>
                          <!--<button class = "section-btn" type="submit" name="action">Submit</button>-->
                     </div>
 

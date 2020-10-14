@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>LABORATORIES</title>
-
+@extends('layouts.master')
+@section('content')
+<div class = "container">
  <h3>LAB INFO</h3>
-</head>
                 <ol>
                     @foreach($Labs as $lab)
                         <li>
@@ -12,5 +9,5 @@
                         </li>
                     @endforeach
                 </ol>
-</body>
-</html> 
+</div>
+@endsection

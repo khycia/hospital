@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	@extends('layouts.master')
-	@section('content')
+@extends('layouts.master')
+@section('content')
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
-			<h1>Inpatients</h1>
+			<h3>Inpatients</h3>
+			<br>
+			<button class = "section-btn"><a href="/inpatients/create">Add inpatient</a></button>
+			<br>
+			<br>
 			<table>
 				<thead>
 					<tr>
@@ -32,12 +30,8 @@
 						</tr>
 					@endforeach	
 				</tbody>
+			</table>
 			</div>
 		</div>
 	</div>
-</table>
-<br>
-	<button><a href="/inpatients/create">Create </a></button>
-	@endsection
-</body>
-</html>
+@endsection

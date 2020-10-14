@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Edit Room</title>
-</head>
-<body>
+@extends('layouts.master')
+@section('content')
+<div class="container">
 	<h1>Edit Room Form</h1>
 		<form action="/rooms/{{ $room->id }}" method='POST'>
       @method('PUT')
@@ -22,12 +19,11 @@
         	</div>
         	<div class="row">
       			<div class="input-field col s6">
-      				<button class="btn waves-effect waves-light" type="submit" name="action">
+      				<button class="section-btn" type="submit" name="action">
     				<i class="material-icons right">Submit</i>
   					</button>
   				</div>
       		</div>
     	</form>
-  		
-</body>
-</html>
+</div>
+@endsection

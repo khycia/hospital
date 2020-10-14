@@ -1,6 +1,9 @@
+@extends('layouts.master')
+@section('content')
+<div class="container">
  <div class="row">
     <div class="col s12">
-    	<h1>Create Doctor Information</h1>
+    	<h4>Create Doctor Form</h4>
     	<form action="/doctors" method='POST'>
     		@csrf
       		<div class="row">
@@ -13,7 +16,7 @@
 
 
    
-     		<div class="row">
+     		  <div class="row">
       			  <div class="input-field col s6">
          				 <input placeholder="Contact" id="contact" type="text" class="validate" name ='contact'>
          				 <label for="contact">Contact</label>
@@ -37,25 +40,19 @@
           				<label for="departmentz">Department</label>
         		</div>
         	</div>
-
+          <br>
  
       		<div class="row">
        			 <div class="input-field col s6">
-        			 <button class="btn waves-effect waves-light" type="sumbit" name="action">Submit
-         			<i class="material-icons right"> Send </i>
-         	
+        			 <button class="section-btn" type="sumbit" name="action">Submit
          			</button>
-        		</div>   
-    
-
-    		</div>
+        		 </div>   
+          </div>
+      </form>
+    </div>
+  </div>
 </div>
-</div>
-</form>
-</div>
-</div>
-</div>
-      
+@endsection      
 
 
 

@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	@extends('layouts.master')
-	@section('content')
+@extends('layouts.master')
+@section('content')
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
@@ -19,11 +13,9 @@
 					<input type="text" name="diagnosis" value="{{$inpatient->diagnosis}}">
 					<label>Room Number: </label>
 					<input type="text" name="room_number" value="{{$inpatient->room_number}}">
-					<input type="submit" name="submit">
+					<button class = "section-btn" type="submit" name="action">Submit</button>	
 				</form>
 			</div>
 		</div>
 	</div>
-	@endsection
-</body>
-</html>
+@endsection

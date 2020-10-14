@@ -1,23 +1,21 @@
-
-
+@extends('layouts.master')
+@section('content')
+<div class = "container">
     <div class="row">
         <div class="col-sm-12">
-            <h1><a href="/doctors/{{ $doctor->id}}/edit">EDIT </a></h1>
-     
-            <h1>{{ $doctor->name }}</h1>
-            <h2>{{ $doctor->contact }}</h2>
-            <h3>{{ $doctor->position }}</h3>
-            <h4>{{ $doctor->department }}</h4>
+            <h3>View Doctor</h3>
+            <a href="/doctors/{{ $doctor->id}}/edit">EDIT </a>
+            <h5>Full name: {{ $doctor->name }}</h5>
+            <h5>Contact no.: {{ $doctor->contact }}</h5>
+            <h5>Position: {{ $doctor->position }}</h5>
+            <h5>Department: {{ $doctor->department }}</h5>
 
             <form action="/doctors/{{ $doctor->id}}" method="POST">
                 @csrf
                 @method('DELETE')
-                    <button class="btn" type='submit'>DELETE</button>
+                    <button class="section-btn" type='submit'>DELETE</button>
             </form>
-
-
-            
         </div>
     </div>
 </div>
-
+@endsection

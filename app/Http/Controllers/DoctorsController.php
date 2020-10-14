@@ -33,7 +33,7 @@ class DoctorsController extends Controller
     	request()->validate([
 
     		'name' => 'required',
-    		'contact' => 'required|unique:doctor',
+    		'contact' => 'required|unique:doctors',
     		'position' =>'required',
     		'department' => 'required'
 
@@ -49,7 +49,7 @@ class DoctorsController extends Controller
     	$doctor->save();
 
 
-    	return redirect('/');
+    	return redirect('/doctors');
     }
 
     public function edit(Doctor $doctor)
@@ -79,7 +79,7 @@ class DoctorsController extends Controller
     	$doctor->save();
 
 
-    	return redirect('/');
+    	return redirect('/doctors');
 
     }
 
@@ -87,7 +87,7 @@ class DoctorsController extends Controller
     {
 
     	$doctor->delete();
-    	return redirect('/');
+    	return redirect('/doctors');
 
     }
 }

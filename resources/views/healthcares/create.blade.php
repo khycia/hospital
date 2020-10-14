@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Create Healthcare</title>
-</head>
-<body>
-	<h1>Create Healthcare Form</h1>
+@extends('layouts.master')
+@section('content')
+<div class="container">
+	<h4>Create Healthcare Form</h4>
+  <br>
 		<form action="/healthcares" method='POST'>
 			@csrf
       		<div class="row">
@@ -19,14 +17,14 @@
           			<label for="discount">Discount</label>
         		</div>
         	</div>
+          <br>
         	<div class="row">
       			<div class="input-field col s6">
-      				<button class="btn waves-effect waves-light" type="submit" name="action">
-    				<i class="material-icons right">Submit</i>
-  					</button>
-  				</div>
+      				<button class="section-btn" type="submit" name="action">
+    				  <i class="material-icons right">Submit</i>
+  					  </button>
+  				  </div>
       		</div>
     	</form>
-  		
-</body>
-</html>
+</div>
+@endsection

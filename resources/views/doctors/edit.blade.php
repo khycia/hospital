@@ -1,6 +1,9 @@
+@extends('layouts.master')
+@section('content')
+<div class = "container">
  <div class="row">
     <div class="col s12">
-    	<h1>UPDATE Doctor Information</h1>
+    	<h4>UPDATE Doctor Information</h4>
 
 
     	<form action="/doctors/{{ $doctor->id}}" method='POST'>
@@ -52,14 +55,11 @@
     
 
     		</div>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-      
-
+        </form>
+    </div>
+  </div>
+</div>   
+@endsection
 
 
 
