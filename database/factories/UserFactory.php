@@ -3,6 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\User;
+use App\Nurses;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 

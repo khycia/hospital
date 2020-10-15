@@ -15,5 +15,9 @@ protected $guarded=[];
     {
     	return $this->hasMany(nurses::class);
     }
+      public function credential()
+    {
+        return $this->first_name.' '.$this->last_name.' '.$this->contact_number.' '.$this->email;
+    }
 
 }
